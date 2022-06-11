@@ -1,0 +1,59 @@
+# Add a line between prompts
+add_newline = true
+
+# Show hostname
+[hostname]
+ssh_only = false
+format = "[$hostname](bold purple) "
+disabled = false
+
+# Change character to show in place of >
+[character]
+success_symbol = "[λ](bold green)"
+error_symbol = "[λ](bold red)"
+
+# Disable package module
+[package]
+disabled = true
+
+[directory]
+style = "bold white"
+
+#-------- Battery  ##
+[battery]
+full_symbol = "  "
+charging_symbol = "  "
+discharging_symbol = "  "
+
+[[battery.display]]
+threshold = 10
+style = "bold red"
+
+[[battery.display]]
+threshold = 20
+style = "bold yellow"
+discharging_symbol = "  "
+
+#-------- Git configuration ##
+
+[git_branch]
+symbol = " "
+truncation_length = 4
+truncation_symbol = ""
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = " "
+
+[git_status]
+conflicted = " "
+ahead = "^"
+behind = "^"
+diverged = " "
+up_to_date = " "
+untracked = " "
+stashed = " "
+modified = " "
+staged = '[+\($count\)](green)'
+renamed = " "
+deleted = " "

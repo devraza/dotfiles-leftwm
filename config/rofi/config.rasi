@@ -1,0 +1,95 @@
+configuration{
+    modi: "run,drun";
+    lines: 2;
+    font: "Victor Mono 12.3";
+    terminal: "st";
+    drun-display-format: " {name} ";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "  Apps ";
+    display-run: "  Run ";
+    sidebar-mode: true;
+}
+
+@theme "rose_pine"
+
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+	width: 700px;
+    height: 300px;
+    border: 3px;
+    border-color: @border;
+    background-color: @base;
+}
+
+mainbox {
+    background-color: @base;
+}
+
+inputbar {
+    children: [prompt,entry];
+    background-color: @base;
+    border-radius: 0px;
+    padding: 0px;
+}
+
+prompt {
+    background-color: @base;
+    padding: 6px;
+    text-color: @foam;
+    border-radius: 10px;
+    margin: 20px 0px 0px 20px;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+entry {
+    padding: 6px;
+    margin: 20px 0px 0px 0px;
+    text-color: @fg-col;
+    background-color: @base;
+}
+
+listview {
+    border: 0px 0px 0px;
+    padding: 6px 0px 0px;
+    margin: 12px 0px 0px 0px;
+    columns: 2;
+    background-color: @base;
+}
+
+element {
+    padding: 3px;
+    background-color: @base;
+    text-color: @fg-col  ;
+}
+
+element selected {
+    background-color:  @surface;
+    text-color: @fg-col2;
+}
+
+mode-switcher {
+    spacing: 0;
+}
+
+button {
+    padding: 6px;
+    background-color: @surface;
+    text-color: @grey;
+    vertical-align: 0.5; 
+    horizontal-align: 0.5;
+}
+
+button selected {
+  background-color: @base;
+  text-color: @foam;
+}

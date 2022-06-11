@@ -1,0 +1,217 @@
+modkey = "Mod4"
+mousekey = "Mod4"
+workspaces = []
+tags = ["Term", "Web", "Code", "Music", "Media"]
+layouts = ["Monocle", "CenterMain", "EvenHorizontal", "GridHorizontal"]
+layout_mode = "Workspace"
+insert_behavior = "Bottom"
+scratchpad = []
+window_rules = []
+disable_current_tag_swap = false
+disable_tile_drag = false
+focus_behaviour = "Sloppy"
+focus_new_windows = true
+
+# Screenshots
+[[keybind]]
+command = "Execute"
+value = "scrot 'screenshot.png' -e 'mv $f ~/Pictures' && xclip -selection clipboard -t image/png -i $HOME/Pictures/screenshot.png"
+modifier = ["modkey", "Shift"]
+key = "a"
+
+[[keybind]]
+command = "Execute"
+value = "scrot -s -f 'screenshot.png' && xclip -selection clipboard -t image/png -i $HOME/Pictures/screenshot.png"
+modifier = ["modkey", "Shift"]
+key = "s"
+
+# MPD Keybindings
+[[keybind]]
+command = "Execute"
+value = "mpc pause"
+modifier = ["Control"]
+key = "j"
+
+[[keybind]]
+command = "Execute"
+value = "mpc play"
+modifier = ["Control"]
+key = "k"
+
+[[keybind]]
+command = "Execute"
+value = "mpc prev"
+modifier = ["Alt"]
+key = "j"
+
+[[keybind]]
+command = "Execute"
+value = "mpc next"
+modifier = ["Alt"]
+key = "k"
+
+# PulseAudio Keybindings
+[[keybind]]
+command = "Execute"
+value = "pulseaudio-ctl down 5"
+modifier = ["Alt", "Shift"]
+key = "j"
+
+[[keybind]]
+command = "Execute"
+value = "pulseaudio-ctl up 5"
+modifier = ["Alt", "Shift"]
+key = "k"
+
+# Application Keybindings
+[[keybind]]
+command = "Execute"
+value = "st -e ncmpcpp"
+modifier = ["modkey", "Control"]
+key = "n"
+
+[[keybind]]
+command = "Execute"
+value = "rofi -show drun"
+modifier = ["modkey"]
+key = "space"
+
+[[keybind]]
+command = "Execute"
+value = "rofi -show run"
+modifier = ["modkey", "Shift"]
+key = "space"
+
+[[keybind]]
+command = "Execute"
+value = "st"
+modifier = ["modkey"]
+key = "Return"
+
+# WM Keybindings
+[[keybind]]
+command = "CloseWindow"
+modifier = ["modkey", "Shift"]
+key = "c"
+
+[[keybind]]
+command = "ToggleFullScreen"
+modifier = ["modkey"]
+key = "f"
+
+[[keybind]]
+command = "SoftReload"
+modifier = ["modkey", "Shift"]
+key = "r"
+
+[[keybind]]
+command = "Execute"
+value = "pkill leftwm"
+modifier = ["modkey", "Shift"]
+key = "q"
+
+[[keybind]]
+command = "ToggleFloating"
+modifier = ["modkey", "Shift"]
+key = "w"
+
+[[keybind]]
+command = "MoveWindowUp"
+modifier = ["modkey", "Shift"]
+key = "k"
+
+[[keybind]]
+command = "MoveWindowDown"
+modifier = ["modkey", "Shift"]
+key = "j"
+
+[[keybind]]
+command = "FocusWindowUp"
+modifier = ["modkey"]
+key = "k"
+
+[[keybind]]
+command = "FocusWindowDown"
+modifier = ["modkey"]
+key = "j"
+
+[[keybind]]
+command = "NextLayout"
+modifier = ["modkey", "Control"]
+key = "k"
+
+[[keybind]]
+command = "PreviousLayout"
+modifier = ["modkey", "Control"]
+key = "j"
+
+[[keybind]]
+command = "FocusWorkspaceNext"
+modifier = ["modkey"]
+key = "l"
+
+[[keybind]]
+command = "FocusWorkspacePrevious"
+modifier = ["modkey"]
+key = "h"
+
+# Change Tags
+[[keybind]]
+command = "GotoTag"
+value = "1"
+modifier = ["modkey"]
+key = "1"
+
+[[keybind]]
+command = "GotoTag"
+value = "2"
+modifier = ["modkey"]
+key = "2"
+
+[[keybind]]
+command = "GotoTag"
+value = "3"
+modifier = ["modkey"]
+key = "3"
+
+[[keybind]]
+command = "GotoTag"
+value = "4"
+modifier = ["modkey"]
+key = "4"
+
+[[keybind]]
+command = "GotoTag"
+value = "5"
+modifier = ["modkey"]
+key = "5"
+
+[[keybind]]
+command = "MoveToTag"
+value = "1"
+modifier = ["modkey", "Shift"]
+key = "1"
+
+[[keybind]]
+command = "MoveToTag"
+value = "2"
+modifier = ["modkey", "Shift"]
+key = "2"
+
+[[keybind]]
+command = "MoveToTag"
+value = "3"
+modifier = ["modkey", "Shift"]
+key = "3"
+
+[[keybind]]
+command = "MoveToTag"
+value = "4"
+modifier = ["modkey", "Shift"]
+key = "4"
+
+[[keybind]]
+command = "MoveToTag"
+value = "5"
+modifier = ["modkey", "Shift"]
+key = "5"

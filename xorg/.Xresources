@@ -1,0 +1,46 @@
+!!! st Configuration
+st.font: Victor Mono:pixelsize=15:antialias=true:autohint=true;
+st.alpha: .99
+
+!!! HiDPI & Font Rendering
+Xft.antialias: 1
+Xft.hinting: 1
+Xft.rgba: rgb
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+! Background/Foreground
+*background: #191724
+*foreground: #e0def4
+
+! Overlay
+*color0: #26233a
+*color8: #26233a
+
+! Love
+*color1: #eb6f92
+*color9: #eb6f92
+
+! Pine
+*color4: #31748f
+*color12: #31748f
+
+! Gold
+*color3: #f6c177
+*color11:  #f6c177
+
+! Foam
+*color2: #9ccfd8
+*color10: #9ccfd8
+
+! Iris
+*color5: #c4a7e7
+*color13: #c4a7e7
+
+! Rose
+*color6: #ebbcba
+*color14: #ebbcba
+
+! Whites
+*color7: #e0def4
+*color15: #e0def4
