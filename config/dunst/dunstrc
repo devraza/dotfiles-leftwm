@@ -1,21 +1,16 @@
 [global]
-frame_color = "#9ccfd8"
-separator_color = frame
-font = Victor Mono 10
-format = "<b>%s</b>\n%b"
+frame_color = "#b4befe"
+separator_color= frame
 
 [urgency_low]
-timeout = 2
-background = "#232136"
-foreground = "#e0def4"
+background = "#1E1E2E"
+foreground = "#CDD6F4"
 
 [urgency_normal]
-timeout = 5
-background = "#232136"
-foreground = "#e0def4"
+background = "#1E1E2E"
+foreground = "#CDD6F4"
 
 [urgency_critical]
-timeout = 0
-background = "#232136"
-foreground = "#e0def4"
-frame_color = "#eb6f92"
+background = "#1E1E2E"
+foreground = "#CDD6F4"
+frame_color = "#FAB387"

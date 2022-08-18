@@ -1,9 +1,0 @@
-* {
-    base:  #191724;
-    surface: #1f1d2e;
-    border: #c4a7e7;
-    foam: #9ccfd8;
-    fg-col: #6e6a86;
-    fg-col2: #e0def4;
-    grey: #6e6a86;
-}

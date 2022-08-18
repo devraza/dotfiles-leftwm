@@ -1,27 +1,62 @@
 modkey = "Mod4"
 mousekey = "Mod4"
 workspaces = []
-tags = ["Term", "Web", "Code", "Music", "Media"]
-layouts = ["Monocle", "CenterMain", "EvenHorizontal", "GridHorizontal"]
-layout_mode = "Workspace"
+tags = ["term", "web", "code", "music", "media"]
+layouts = ["GridHorizontal", "CenterMainBalanced", "Monocle"]
+layout_mode = "Tag"
 insert_behavior = "Bottom"
-scratchpad = []
-window_rules = []
 disable_current_tag_swap = false
 disable_tile_drag = false
-focus_behaviour = "Sloppy"
+focus_behaviour = "Driven"
 focus_new_windows = true
 
-# Screenshots
+window_rules = [
+    {window_class = "Chromium", spawn_on_tag = 2 },
+    {window_class = "Emacs", spawn_on_tag = 3 },
+]
+
+# Backlight
 [[keybind]]
 command = "Execute"
-value = "scrot 'screenshot.png' -e 'mv $f ~/Pictures' && xclip -selection clipboard -t image/png -i $HOME/Pictures/screenshot.png"
+value = "brightnessctl set 10%-"
+modifier = ["Control", "Shift"]
+key = "j"
+
+[[keybind]]
+command = "Execute"
+value = "brightnessctl set +10%"
+modifier = ["Control", "Shift"]
+key = "k"
+
+# PulseAudio Keybindings
+[[keybind]]
+command = "Execute"
+value = "pamixer -d 5"
+modifier = ["Control", "Alt"]
+key = "j"
+
+[[keybind]]
+command = "Execute"
+value = "pamixer -i 5"
+modifier = ["Control", "Alt"]
+key = "k"
+
+[[keybind]]
+command = "Execute"
+value = "pamixer -t"
+modifier = ["Control", "Alt"]
+key = "l"
+
+# Screenshotting
+[[keybind]]
+command = "Execute"
+value = "scrot Pictures/screenshot.png -e 'xclip -selection clipboard -t image/png -i $f'"
 modifier = ["modkey", "Shift"]
 key = "a"
 
 [[keybind]]
 command = "Execute"
-value = "scrot -s -f 'screenshot.png' && xclip -selection clipboard -t image/png -i $HOME/Pictures/screenshot.png"
+value = "scrot -s -f Pictures/screenshot.png -e 'xclip -selection clipboard -t image/png -i $f'"
 modifier = ["modkey", "Shift"]
 key = "s"
 
@@ -29,56 +64,62 @@ key = "s"
 [[keybind]]
 command = "Execute"
 value = "mpc pause"
-modifier = ["Control"]
+modifier = ["modkey", "Control"]
 key = "j"
 
 [[keybind]]
 command = "Execute"
 value = "mpc play"
-modifier = ["Control"]
+modifier = ["modkey", "Control"]
 key = "k"
 
 [[keybind]]
 command = "Execute"
 value = "mpc prev"
-modifier = ["Alt"]
-key = "j"
+modifier = ["modkey", "Control"]
+key = "h"
 
 [[keybind]]
 command = "Execute"
 value = "mpc next"
-modifier = ["Alt"]
-key = "k"
+modifier = ["modkey", "Control"]
+key = "l"
 
-# PulseAudio Keybindings
+# Bottles (bottles-cli)
 [[keybind]]
 command = "Execute"
-value = "pulseaudio-ctl down 5"
-modifier = ["Alt", "Shift"]
-key = "j"
-
-[[keybind]]
-command = "Execute"
-value = "pulseaudio-ctl up 5"
-modifier = ["Alt", "Shift"]
-key = "k"
+value = "gamemoderun flatpak run --command=bottles-cli com.usebottles.bottles run -b 'Geometry Dash' -p GeometryDash"
+modifier = ["modkey", "Shift"]
+key = "o"
 
 # Application Keybindings
 [[keybind]]
 command = "Execute"
+value = "rx"
+modifier = ["modkey"]
+key = "r"
+
+[[keybind]]
+command = "Execute"
 value = "st -e ncmpcpp"
-modifier = ["modkey", "Control"]
+modifier = ["modkey"]
 key = "n"
 
 [[keybind]]
 command = "Execute"
-value = "rofi -show drun"
+value = "emacsclient -c -a 'emacs'"
+modifier = ["modkey"]
+key = "e"
+
+[[keybind]]
+command = "Execute"
+value = "rofi -show drun -dpi 192"
 modifier = ["modkey"]
 key = "space"
 
 [[keybind]]
 command = "Execute"
-value = "rofi -show run"
+value = "rofi -show run -dpi 192"
 modifier = ["modkey", "Shift"]
 key = "space"
 
@@ -88,11 +129,23 @@ value = "st"
 modifier = ["modkey"]
 key = "Return"
 
+[[keybind]]
+command = "Execute"
+value = "chromium"
+modifier = ["modkey"]
+key = "b"
+
 # WM Keybindings
 [[keybind]]
 command = "CloseWindow"
 modifier = ["modkey", "Shift"]
 key = "c"
+
+[[keybind]]
+command = "Execute"
+value = "slock"
+modifier = ["modkey"]
+key = "l"
 
 [[keybind]]
 command = "ToggleFullScreen"
@@ -112,7 +165,7 @@ key = "q"
 
 [[keybind]]
 command = "ToggleFloating"
-modifier = ["modkey", "Shift"]
+modifier = ["modkey"]
 key = "w"
 
 [[keybind]]
@@ -137,23 +190,14 @@ key = "j"
 
 [[keybind]]
 command = "NextLayout"
-modifier = ["modkey", "Control"]
-key = "k"
+modifier = ["modkey"]
+key = "o"
 
 [[keybind]]
 command = "PreviousLayout"
-modifier = ["modkey", "Control"]
-key = "j"
-
-[[keybind]]
-command = "FocusWorkspaceNext"
 modifier = ["modkey"]
-key = "l"
+key = "i"
 
-[[keybind]]
-command = "FocusWorkspacePrevious"
-modifier = ["modkey"]
-key = "h"
 
 # Change Tags
 [[keybind]]

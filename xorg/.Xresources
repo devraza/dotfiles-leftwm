@@ -1,46 +1,46 @@
 !!! st Configuration
-st.font: Victor Mono:pixelsize=15:antialias=true:autohint=true;
-st.alpha: .99
+st.font: Iosevka:pixelsize=28:antialias=true:autohint=true;
+st.alpha: 1
 
 !!! HiDPI & Font Rendering
+Xft.dpi: 192
 Xft.antialias: 1
 Xft.hinting: 1
 Xft.rgba: rgb
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-! Background/Foreground
-*background: #191724
-*foreground: #e0def4
+*background: #1E1E2E
+*foreground: #CDD6F4
 
-! Overlay
-*color0: #26233a
-*color8: #26233a
+! black
+*color0: #45475A
+*color8: #585B70
 
-! Love
-*color1: #eb6f92
-*color9: #eb6f92
+! red
+*color1: #F38BA8
+*color9: #F38BA8
 
-! Pine
-*color4: #31748f
-*color12: #31748f
+! green
+*color2: #A6E3A1
+*color10: #A6E3A1
 
-! Gold
-*color3: #f6c177
-*color11:  #f6c177
+! yellow
+*color3: #F9E2AF
+*color11: #F9E2AF
 
-! Foam
-*color2: #9ccfd8
-*color10: #9ccfd8
+! lavender
+*color4: #b4befe
+*color12: #b4befe
 
-! Iris
-*color5: #c4a7e7
-*color13: #c4a7e7
+! magenta
+*color5: #F5C2E7
+*color13: #F5C2E7
 
-! Rose
-*color6: #ebbcba
-*color14: #ebbcba
+! cyan
+*color6: #94E2D5
+*color14: #94E2D5
 
-! Whites
-*color7: #e0def4
-*color15: #e0def4
+! white
+*color7: #BAC2DE
+*color15: #A6ADC8

@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+
+if [ -f "$(command -v mpd)" ]; then
+  mpd &
+fi
+
+if [ -f "$(command -v /usr/bin/emacs)" ]; then
+  /usr/bin/emacs &
+fi
+
+# Custom pipewire startup script
+if [ -f "$(command -v start-pipewire)" ]; then
+  start-pipewire &
+fi
+
+# I don't have a root password
+if [ -f "$(command -v ananicy)" ]; then
+  sudo ananicy start &
+fi
+
+export SCRIPTPATH="$(
+  cd "$(dirname "$0")" || exit
+  pwd -P
+)"
+
+if [ -f "/tmp/leftwm-theme-down" ]; then
+  /tmp/leftwm-theme-down
+  rm /tmp/leftwm-theme-down
+fi
+ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
+
+leftwm-command "LoadTheme $SCRIPTPATH/theme.toml"
+
+# Launch dunst
+if [ -x "$(command -v dunst)" ]; then
+  dunst &
+fi
+
+# Set wallpaper
+if [ -x "$(command -v feh)" ]; then
+  feh --bg-fill $SCRIPTPATH/background.png
+fi
+
+# Launch picom if installed
+if [ -x "$(command -v picom)" ]; then
+  pkill picom
+  picom &
+fi
+
+# Launch polybar if installed
+if [ -x "$(command -v polybar)" ]; then
+  pkill polybar
+  polybar -c "$SCRIPTPATH/polybar.config" &
+fi
