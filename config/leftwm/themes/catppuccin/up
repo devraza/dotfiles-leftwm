@@ -5,7 +5,7 @@ if [ -f "$(command -v mpd)" ]; then
 fi
 
 if [ -f "$(command -v /usr/bin/emacs)" ]; then
-  /usr/bin/emacs &
+  /usr/bin/emacs --daemon &
 fi
 
 # Custom pipewire startup script
