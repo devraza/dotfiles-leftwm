@@ -1,4 +1,4 @@
-#+title: LeftWM Dotfiles
+#+title: Dotfiles - LeftWM
 #+description: This repository contains the configurations for my dotfiles
 #+author: devraza
 
@@ -7,21 +7,21 @@ This repository contains the configurations for my ~LeftWM~ dotfiles.
 ** Applications
 Below is a list of applications/programs that I use and that my dotfiles may require:
 
-| Application          | Name                    |
-| Music Player         | MPD +ncmpcpp            |
-| Editor               | Doom Emacs              |
-| PDF Viewer           | zathura                 |
-| Wallpaper Setter     | nitrogen                |
-| BitTorrent Client    | Transmission            |
-| Application Launcher | Rofi                    |
-| Password Manager     | Pass                    |
-| Media Player         | mpv                     |
-| File Manager         | ranger                  |
+| *Application*          | *Name*         |
+| Music Player         | MPD +ncmpcpp |
+| Editor               | Doom Emacs   |
+| PDF Viewer           | zathura      |
+| Wallpaper Setter     | nitrogen     |
+| BitTorrent Client    | Transmission |
+| Application Launcher | Rofi         |
+| Password Manager     | Pass         |
+| Media Player         | mpv          |
+| File Manager         | ranger       |
 
 ** Additional Information
-Here's about of additional 'rice'-related information:
+Here's some additional 'rice'-related information:
 
-| Item                | Value                   |
+| *Item*                | *Value*                   |
 | Colourscheme        | Tokyo Night             |
 | Window Manager      | LeftWM                  |
 | Status Bar          | polybar                 |
