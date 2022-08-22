@@ -50,13 +50,13 @@ key = "l"
 # Screenshotting
 [[keybind]]
 command = "Execute"
-value = "scrot Pictures/screenshot.png -e 'xclip -selection clipboard -t image/png -i $f'"
+value = "scrot Pictures/Screenshots/$(date +'%d.%m.%Y-%H:%M:%S').png -e 'xclip -selection clipboard -t image/png -i $f'"
 modifier = ["modkey", "Shift"]
 key = "a"
 
 [[keybind]]
 command = "Execute"
-value = "scrot -s -f Pictures/screenshot.png -e 'xclip -selection clipboard -t image/png -i $f'"
+value = "scrot -s -f Pictures/Screenshots/$(date +'%d.%m.%Y-%H:%M:%S').png -e 'xclip -selection clipboard -t image/png -i $f'"
 modifier = ["modkey", "Shift"]
 key = "s"
 
