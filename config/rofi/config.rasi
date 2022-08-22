@@ -12,7 +12,7 @@ configuration{
     sidebar-mode: true;
 }
 
-@theme "catppuccin"
+@theme "tokyonight"
 
 element-text, element-icon , mode-switcher {
     background-color: inherit;

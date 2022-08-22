@@ -36,15 +36,14 @@ if [ -x "$(command -v dunst)" ]; then
   dunst &
 fi
 
-# Set wallpaper
-if [ -x "$(command -v feh)" ]; then
-  feh --bg-fill $SCRIPTPATH/background.png
+# Restore nitrgoen
+if [ -x "$(command -v nitrogen)" ]; then
+  nitrogen --restore &
 fi
 
 # Launch picom if installed
 if [ -x "$(command -v picom)" ]; then
-  pkill picom
-  picom &
+  picom --experimental-backends &
 fi
 
 # Launch polybar if installed

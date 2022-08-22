@@ -7,7 +7,7 @@ layout_mode = "Tag"
 insert_behavior = "Bottom"
 disable_current_tag_swap = false
 disable_tile_drag = false
-focus_behaviour = "Driven"
+focus_behaviour = "Sloppy"
 focus_new_windows = true
 
 window_rules = [
@@ -19,13 +19,13 @@ window_rules = [
 [[keybind]]
 command = "Execute"
 value = "brightnessctl set 10%-"
-modifier = ["Control", "Shift"]
+modifier = ["modkey", "Control", "Shift"]
 key = "j"
 
 [[keybind]]
 command = "Execute"
 value = "brightnessctl set +10%"
-modifier = ["Control", "Shift"]
+modifier = ["modkey", "Control", "Shift"]
 key = "k"
 
 # PulseAudio Keybindings
@@ -85,14 +85,13 @@ value = "mpc next"
 modifier = ["modkey", "Control"]
 key = "l"
 
-# Bottles (bottles-cli)
+# Application Keybindings
 [[keybind]]
 command = "Execute"
-value = "gamemoderun flatpak run --command=bottles-cli com.usebottles.bottles run -b 'Geometry Dash' -p GeometryDash"
-modifier = ["modkey", "Shift"]
-key = "o"
+value = "st -e ranger"
+modifier = ["modkey"]
+key = "a"
 
-# Application Keybindings
 [[keybind]]
 command = "Execute"
 value = "rx"
