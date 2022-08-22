@@ -15,6 +15,9 @@ export PATH=~/.emacs.d/bin:$PATH
 # Timezone configuration
 export TZ=Europe/London
 
+# Fix GPG
+export GPG_TTY=$(tty)
+
 # Regular aliases
 alias ouchd='ouch decompress'
 alias ouchc='ouch compress'
@@ -52,7 +55,6 @@ zi snippet OMZP::git
 zi snippet OMZP::sudo
 zi snippet OMZP::golang
 zi snippet OMZP::gh
-zi snippet OMZP::pass
 zi snippet OMZP::git
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
