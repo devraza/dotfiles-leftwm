@@ -1,7 +1,7 @@
 configuration{
     modi: "run,drun";
     lines: 2;
-    font: "Victor Mono 12.3";
+    font: "Iosevka 12.3";
     terminal: "st";
     drun-display-format: " {name} ";
     location: 0;

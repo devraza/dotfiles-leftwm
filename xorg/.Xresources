@@ -1,6 +1,7 @@
 !!! st Configuration
 st.font: Iosevka:pixelsize=28:antialias=true:autohint=true;
-st.alpha: 1
+st.alpha: .9
+st.borderpx: 6
 
 !!! HiDPI & Font Rendering
 Xft.dpi: 192
@@ -10,37 +11,43 @@ Xft.rgba: rgb
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-*background: #1E1E2E
-*foreground: #CDD6F4
+*.foreground:     #c0caf5
+*.background:     #1a1b26
+*.cursorColor:    #c0caf4
+*.highlightColor: #292e42
 
-! black
-*color0: #45475A
-*color8: #585B70
+! Normal      Bright
+! --------    -------
+! 0 Black      8 Black
+! 1 Red        9 Red
+! 2 Yellow    10 Yellow
+! 3 Green     11 Green
+! 4 Blue      12 Blue
+! 5 Magenta   13 Magenta
+! 6 Cyan      14 Cyan
+! 7 White     15 White
 
-! red
-*color1: #F38BA8
-*color9: #F38BA8
-
-! green
-*color2: #A6E3A1
-*color10: #A6E3A1
-
-! yellow
-*color3: #F9E2AF
-*color11: #F9E2AF
-
-! lavender
-*color4: #b4befe
-*color12: #b4befe
-
-! magenta
-*color5: #F5C2E7
-*color13: #F5C2E7
-
-! cyan
-*color6: #94E2D5
-*color14: #94E2D5
-
-! white
-*color7: #BAC2DE
-*color15: #A6ADC8
+! Black colours
+*.color0:        #4e5172
+*.color8:        #4e5173
+! Red colours
+*.color1:        #F7768E
+*.color9:        #F7768E
+! Yellow colours
+*.color2:        #E0AF68
+*.color10:       #E0AF68
+! Green colours
+*.color3:        #9ECE6A
+*.color11:       #9ECE6A
+! Blue colours
+*.color4:        #7AA2F7
+*.color12:       #7AA2F7
+! Magenta colours
+*.color5:        #9A7ECC
+*.color13:       #9A7ECC
+! Teal
+*.color6:        #1abc9c
+*.color14:       #1abc9c
+! White colours
+*.color7:        #ACB0D0
+*.color15:       #ACB0D0

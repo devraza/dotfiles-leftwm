@@ -11,20 +11,22 @@ focus_behaviour = "Sloppy"
 focus_new_windows = true
 
 window_rules = [
-    {window_class = "Chromium", spawn_on_tag = 2 },
-    {window_class = "Emacs", spawn_on_tag = 3 },
+    {window_class = "gcr-prompter", spawn_floating = true },
+    {window_class = "qutebrowser", spawn_on_tag = 2 },
+    {window_title = "termusic", spawn_on_tag = 4 },
+    {window_class = "neovide", spawn_on_tag = 3 },
 ]
 
 # Backlight
 [[keybind]]
 command = "Execute"
-value = "brightnessctl set 10%-"
+value = "sudo brightnessctl set 10%-"
 modifier = ["modkey", "Control", "Shift"]
 key = "j"
 
 [[keybind]]
 command = "Execute"
-value = "brightnessctl set +10%"
+value = "sudo brightnessctl set +10%"
 modifier = ["modkey", "Control", "Shift"]
 key = "k"
 
@@ -32,60 +34,41 @@ key = "k"
 [[keybind]]
 command = "Execute"
 value = "pamixer -d 5"
-modifier = ["Control", "Alt"]
+modifier = ["modkey", "Control"]
 key = "j"
 
 [[keybind]]
 command = "Execute"
 value = "pamixer -i 5"
-modifier = ["Control", "Alt"]
+modifier = ["modkey", "Control"]
 key = "k"
 
 [[keybind]]
 command = "Execute"
 value = "pamixer -t"
-modifier = ["Control", "Alt"]
+modifier = ["modkey", "Control"]
 key = "l"
 
 # Screenshotting
 [[keybind]]
 command = "Execute"
-value = "scrot Pictures/Screenshots/$(date +'%d.%m.%Y-%H:%M:%S').png -e 'xclip -selection clipboard -t image/png -i $f'"
+value = "scrot Pictures/Screenshots/$(date +'%d.%m.%Y-%H:%M:%S').png -e 'xclip -t image/png -i $f'"
 modifier = ["modkey", "Shift"]
 key = "a"
 
 [[keybind]]
 command = "Execute"
-value = "scrot -s -f Pictures/Screenshots/$(date +'%d.%m.%Y-%H:%M:%S').png -e 'xclip -selection clipboard -t image/png -i $f'"
+value = "scrot -s -f Pictures/Screenshots/$(date +'%d.%m.%Y-%H:%M:%S').png -e 'xclip -t image/png -i $f'"
 modifier = ["modkey", "Shift"]
 key = "s"
 
-# MPD Keybindings
-[[keybind]]
-command = "Execute"
-value = "mpc pause"
-modifier = ["modkey", "Control"]
-key = "j"
-
-[[keybind]]
-command = "Execute"
-value = "mpc play"
-modifier = ["modkey", "Control"]
-key = "k"
-
-[[keybind]]
-command = "Execute"
-value = "mpc prev"
-modifier = ["modkey", "Control"]
-key = "h"
-
-[[keybind]]
-command = "Execute"
-value = "mpc next"
-modifier = ["modkey", "Control"]
-key = "l"
-
 # Application Keybindings
+[[keybind]]
+command = "Execute"
+value = "gpick -s -o | xclip -i"
+modifier = ["modkey"]
+key = "p"
+
 [[keybind]]
 command = "Execute"
 value = "st -e ranger"
@@ -100,13 +83,13 @@ key = "r"
 
 [[keybind]]
 command = "Execute"
-value = "st -e ncmpcpp"
+value = "st -e termusic"
 modifier = ["modkey"]
 key = "n"
 
 [[keybind]]
 command = "Execute"
-value = "emacsclient -c -a 'emacs'"
+value = "neovide"
 modifier = ["modkey"]
 key = "e"
 
@@ -130,7 +113,7 @@ key = "Return"
 
 [[keybind]]
 command = "Execute"
-value = "chromium"
+value = "qutebrowser"
 modifier = ["modkey"]
 key = "b"
 
